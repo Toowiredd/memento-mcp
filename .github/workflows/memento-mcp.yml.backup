@@ -1,17 +1,13 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-# DISABLED AUTO-RUN: Originally triggered on auto-triggers
-# Converted to manual execution only - 2025-10-18
-# Backup available at: memento-mcp.yml.backup
 name: Memento MCP Tests
 
 on:
-  workflow_dispatch:  # Manual trigger only
-#   push:
-#     branches: [ "**" ]  # Trigger on all branches
-#   pull_request:
-#     branches: [ "**" ]  # Trigger on all PRs
+  push:
+    branches: [ "**" ]  # Trigger on all branches
+  pull_request:
+    branches: [ "**" ]  # Trigger on all PRs
 
 jobs:
   build:
